@@ -42,40 +42,7 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <% batch.forEach(function(item){ %>
-                                        <tr>
-                                            <td>
-                                                <%= item.Batch_ID %>
-                                            </td>
-                                            <td>
-                                                <%= item.Medicine_Name %>
-                                            </td>
-                                            <td>
-                                                <%= item.Quantity %>
-                                            </td>
-                                            <td>
-                                                <%= item.Cost_Price %>
-                                            </td>
-                                            <td>
-                                                <%= item.Sell_Price %>
-                                            </td>
-                                            <td>
-                                                <%= item.Production_Date %>
-                                            </td>
-                                            <td>
-                                                <%= item.Expire_Date %>
-                                            </td>
-                                            <td>
-                                                <%= item.Supplier_Name %>
-                                            </td>
-                                            <td><a href="/admin/batch/edit/<%= item.Batch_ID %>">Edit |</a>
-                                                <a href="/admin/batch/delid=<%= item.Batch_ID %>"
-                                                    onclick="return confirm('Are You Sure to Delete?')">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <% }) %>
-                                </tbody>
+
                             </table>
                         </div>
                     </div>
