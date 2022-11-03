@@ -28,8 +28,8 @@
 
                 <div class="form-group">
                     <label for="category">Category</label>
-                    <select class="form-control" id="category" name="category">
-                    <option> Select Category</option>
+                    <select class="form-control" id="category" name="category" required>
+                    <option value="" disabled selected hidden> Select Category</option>
                     <% categoryname.forEach(function(item){ %>
                     <option value="<%= item.ID %>"> <%= item.Category %> </option>
                     <% }) %>
@@ -38,8 +38,8 @@
 
                     <div class="form-group">
                         <label for="generic_Name">Generic Name</label>
-                        <select class="form-control" id="generic_name" name="generic_name">
-                        <option> Select Generic Name </option>
+                        <select class="form-control" id="generic_name" name="generic_name" required>
+                        <option value="" disabled selected hidden> Select Generic Name </option>
                         <% genericname.forEach(function(item){ %>
                         <option value="<%= item.ID %>"> <%= item.Generic_Name %> </option>
                         <% }) %>
@@ -48,8 +48,8 @@
 
                     <div class="form-group">
                         <label for="supplier_name">Manufacturer Name</label>
-                        <select class="form-control" id="manufacturer_name" name="manufacturer_name">
-                        <option> Select Manufacturer Name </option>
+                        <select class="form-control" id="manufacturer_name" name="manufacturer_name" required>
+                        <option value="" disabled selected hidden> Select Manufacturer Name </option>
                         <% manufacturername.forEach(function(item){ %>
                         <option value="<%= item.ID %>"> <%= item.Manufacturer_Name %> </option>
                         <% }) %>
@@ -57,6 +57,9 @@
                     </div>
                     <input type="submit" class="btn btn-primary" name="submit" value="Create">
             </form>
+
+            <% include inc/alert_msg.ejs %>
+
             </div>
         </div>
         <br />

@@ -15,7 +15,7 @@
         </div>
         <!-- /.row -->
         <div class="container" style="float: left; font-size:17px;">
-          <a href="/admin/manufacturer/create">Create</a>
+          <a href="/admin/manufacturer/create" class="btn btn-primary">Add New Manufacturer</a>
         </div>
 
         <div class="row">
@@ -32,7 +32,6 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Manufacturer Name</th>
                         <th>Action</th>
                     </tr>
@@ -40,7 +39,6 @@
                     <tbody>
                     <% manufacturer.forEach(function(item){ %>
                     <tr>
-                        <td><%= item.ID %></td>
                         <td><%= item.Manufacturer_Name %></td>
                         <td><a href="/admin/manufacturer/edit/<%= item.ID %>">Edit |</a>
                         <a href="/admin/manufacturer/delid=<%= item.ID %>" onclick="return confirm('Are You Sure to Delete?')">Delete</a></td>

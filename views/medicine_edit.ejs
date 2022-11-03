@@ -24,47 +24,53 @@
                 <div class="form-group">
                   <label for="med_name">Medicine Name</label>
                   <input type="text" class="form-control" id="medicine_name" name="medicine_name"
-                  placeholder="Medicine Name" value="<%= medInfo.Medicine_Name %>">
+                  placeholder="Medicine Name" value="<% medInfo.forEach(function(item){ %>  <%= item.Medicine_Name %> <% }) %>">
                 </div>
 
                 <div class="form-group">
-                    <label for="sel1">Select Category</label>
-                    <select class="form-control" id="categoryname" name="categoryname">
+                    <label for="sel1">Medicine Category</label>
+                    <select class="form-control" id="categoryname" name="categoryname" required>
                         <% cateName.forEach(function(item){ %>
+                            <% medInfo.forEach(function(items){ %> 
                         <option
-                        <% if (item.ID == medInfo.Category_ID) { %>
+                        <% if (item.ID == items.Category_ID) { %>
                         selected="selected"
                         <% } %> value="<%= item.ID %>" >
                         <%= item.Category %>
                         </option>
+                            <% }) %>
                         <% }) %>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="sel1">Select Generic Name</label>
-                    <select class="form-control" id="genericName" name="genericName">
+                    <select class="form-control" id="genericName" name="genericName" required>
                         <% dGenericName.forEach(function(item){ %>
+                            <% medInfo.forEach(function(items){ %> 
                         <option
-                        <% if (item.ID == medInfo.GENERIC_ID) { %>
+                        <% if (item.ID == items.Generic_ID) { %>
                         selected="selected"
                         <% } %> value="<%= item.ID %>" >
                         <%= item.Generic_Name %>
                         </option>
+                            <% }) %>
                         <% }) %>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="sel1">Select Manufacturer Name</label>
-                    <select class="form-control" id="manuName" name="manuName">
+                    <select class="form-control" id="manuName" name="manuName" required>
                         <% manuName.forEach(function(item){ %>
+                            <% medInfo.forEach(function(items){ %> 
                         <option
-                        <% if (item.ID == medInfo.MANUFACTURER_ID) { %>
+                        <% if (item.ID == items.Manufacturer_ID) { %>
                         selected="selected"
                         <% } %> value="<%= item.ID %>" >
                         <%= item.Manufacturer_Name %>
                         </option>
+                            <% }) %>
                         <% }) %>
                     </select>
                 </div>
@@ -72,6 +78,11 @@
                 <input type="submit" class="btn btn-primary" name="submit" value="Update">
 
                 </form>
+
+
+                <% include inc/alert_msg.ejs %>
+
+                
             </div>
         </div>
         <br />

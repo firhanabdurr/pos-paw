@@ -29,8 +29,8 @@
 
                     <div class="form-group">
                         <label for="supplier_name">Supplier Name</label>
-                        <select class="form-control" id="supplier_name" name="supplier_name">
-                        <option> Select Supplier Name </option>
+                        <select class="form-control" id="supplier_name" name="supplier_name" required>
+                        <option value="" disabled selected hidden> Select Supplier Name </option>
                         <% suppliername.forEach(function(item){ %>
                         <option value="<%= item.ID %>"> <%= item.Supplier_Name %> </option>
                         <% }) %>
@@ -39,8 +39,8 @@
 
                     <div class="form-group">
                         <label for="medicine_name">Medicine Name</label>
-                        <select class="form-control" id="medicine_name" name="medicine_name">
-                        <option> Select Medicine Name </option>
+                        <select class="form-control" id="medicine_name" name="medicine_name" required>
+                        <option value="" disabled selected hidden> Select Medicine Name </option>
                         <% medicinename.forEach(function(item){ %>
                         <option value="<%= item.ID %>"> <%= item.Medicine_Name %> </option>
                         <% }) %>
@@ -78,6 +78,11 @@
 
                     <input type="submit" class="btn btn-primary" name="submit" value="Create" >
             </form>
+
+
+            <% include inc/alert_msg.ejs %>
+
+
             </div>
         </div>
         <br />
