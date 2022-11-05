@@ -273,8 +273,7 @@ CREATE TABLE `user_information` (
 --
 
 INSERT INTO `user_information` (`ID`, `Name`, `Email`, `Gender`, `Date_of_Birth`, `Age`, `Address`, `Contact`, `Blood_Group`, `Marital_Status`, `Join_Date`, `Salary`, `Username`) VALUES
-(3, 'bappy', 'bappy@gmail.com', 'Male', '2017-09-19', 24, 'dhaka, mirpur11', 100000, 'B+', 'Unmarried', '2017-09-27', 777, 'bappy'),
-(4, 'Tusar', 'tusar@gmail.com', 'Male', '2017-09-13', 24, 'dhaka', 123445, 'A+', 'Married', '2017-09-27', 222, 'tusar');
+(3, 'Firhan', 'firhanabdurr@gmail.com', 'Male', '1998-10-11', 24, 'gunungleutik, ciparay', 628135555, 'O+', 'Unmarried', '2022-10-27', 1000, 'firhan');
 
 --
 -- Indexes for dumped tables
